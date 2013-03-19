@@ -3,6 +3,8 @@ function love.load()
 end
 
 function love.draw()
+	love.graphics.setColor( 255, 255, 255 )
+	love.graphics.print("Hello World", 0, 0)
 end
 
 function love.update(dt)
