@@ -1,5 +1,5 @@
 function love.load()
-	love.graphics.setBackgroundColor( 255, 255, 255 )
+	love.graphics.setBackgroundColor( 0, 0, 0 )
 end
 
 function love.draw()
