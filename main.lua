@@ -3,8 +3,11 @@ function love.load()
 end
 
 function love.draw()
+	local x = love.mouse.getX()
+	local y = love.mouse.getY()
+
 	love.graphics.setColor( 255, 255, 255 )
-	love.graphics.print("Hello World", 0, 0)
+	love.graphics.rectangle( "fill", x-16, y-16, 32, 32 )
 end
 
 function love.update(dt)
