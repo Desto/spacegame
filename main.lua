@@ -1,4 +1,5 @@
 Gamestate = require "hump.gamestate"
+vector = require "hump.vector"
 
 local menu = {}
 local game = {}
@@ -44,7 +45,7 @@ function game:draw()
     --Entities.draw()
     love.graphics.setColor( 255, 255, 255, 255 )
 	love.graphics.draw( planet1, 300, 300, 0, 1, 1, 0, 0 )
-	
+
     love.graphics.setColor(255,255,0,255)
     love.graphics.rectangle("fill",ship.x,ship.y,30,15)
 end
