@@ -9,7 +9,7 @@ function menu:init()
 end
 
 function menu:draw()
-    love.graphics.print("Press Enter to continue", 10, 10)
+    love.graphics.print("Press 'm' to continue", 10, 10)
 end
 
 function menu:keypressed(key, unicode)
