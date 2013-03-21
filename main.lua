@@ -4,28 +4,29 @@ vector = require "hump.vector"
 local menu = {}
 local game = {}
 
+function menu:init()
+	-- body
+end
+
 function menu:draw()
     love.graphics.print("Press Enter to continue", 10, 10)
 end
 
-function menu:keyreleased(key)
-    if key == 'enter' then
-        --Gamestate.switch(game)
-        Gamestate.quit()
+function menu:keypressed(key, unicode)
+    if key == "m" then
+        Gamestate.switch(game)
     end
 end
 
 function game:enter()
+   --Entities.clear()
+   -- setup entities here
 	ship = {}
 	ship.x = 300
 	ship.y = 400
 	ship.speed = 100
 
-    --love.graphics.setBackgroundColor( 0, 0, 0 )
 	planet1 = love.graphics.newImage("textures/planet1.png")
-
-    --Entities.clear()
-    -- setup entities here
 end
 
 function game:update(dt)
@@ -52,5 +53,5 @@ end
 
 function love.load()
 	Gamestate.registerEvents()
-    Gamestate.switch(game)
+    Gamestate.switch(menu)
 end
