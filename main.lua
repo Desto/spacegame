@@ -1,7 +1,7 @@
 gamestate = require "hump.gamestate"
 vector = require "hump.vector"
-tween = require "tween"
-gui = require "Quickie.quickie"
+tween = require "tween.tween"
+gui = require "Quickie"
 
 local menu = {}
 local game = {}
