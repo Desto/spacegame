@@ -21,6 +21,7 @@ function menu:draw()
 end
 
 function menu:update(dt)
+	-- Play and Quit buttons in the middle of the screen
 	gui.group.push{grow = "down", pos = {love.graphics.getWidth()/2 - gui.group.default.size[1]/2, love.graphics.getHeight()/2 - gui.group.default.size[2]/2}}
 
 	if gui.Button{text = "Play"} then
@@ -64,8 +65,9 @@ function game:update(dt)
 		ship.y = ship.y - ship.speed*dt
 	end
 
-	gui.group.push{grow = "down", pos = {10,10}}
 
+	-- Quit button in upper left corner
+	gui.group.push{grow = "down", pos = {10,10}}
 	if gui.Button{text = "Quit"} then
 		love.event.quit()
 	end
