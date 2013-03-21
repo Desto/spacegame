@@ -1,5 +1,7 @@
-Gamestate = require "hump.gamestate"
+gamestate = require "hump.gamestate"
 vector = require "hump.vector"
+tween = require "tween"
+gui = require "Quickie.quickie"
 
 local menu = {}
 local game = {}
@@ -14,7 +16,7 @@ end
 
 function menu:keypressed(key, unicode)
     if key == "m" then
-        Gamestate.switch(game)
+        gamestate.switch(game)
     end
 end
 
@@ -52,6 +54,6 @@ function game:draw()
 end
 
 function love.load()
-	Gamestate.registerEvents()
-    Gamestate.switch(menu)
+	gamestate.registerEvents()
+    gamestate.switch(menu)
 end
