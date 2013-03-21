@@ -63,6 +63,13 @@ function game:update(dt)
 	elseif love.keyboard.isDown("up") then
 		ship.y = ship.y - ship.speed*dt
 	end
+
+	gui.group.push{grow = "down", pos = {10,10}}
+
+	if gui.Button{text = "Quit"} then
+		love.event.quit()
+	end
+	gui.group.pop{}
 end
 
 function game:draw()
@@ -72,6 +79,7 @@ function game:draw()
 
     love.graphics.setColor(255,255,0,255)
     love.graphics.rectangle("fill",ship.x,ship.y,30,15)
+    gui.core.draw()
 end
 
 function love.load()
